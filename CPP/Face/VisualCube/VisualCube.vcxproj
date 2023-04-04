@@ -79,12 +79,12 @@
     <LibraryPath>C:\Info\Projects\Its\Libs\freeglut\lib\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>C:\Info\Projects\Its\Libs\freeglut\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Info\Projects\Its\Libs\freeglut\lib\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\..\Libs\freeglut\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\..\Libs\freeglut\lib\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>C:\Info\Projects\Its\Libs\freeglut\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Info\Projects\Its\Libs\freeglut\lib\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)\..\Libs\freeglut\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\..\Libs\freeglut\lib\Release;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
