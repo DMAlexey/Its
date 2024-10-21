@@ -18,6 +18,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fstream>
+#include <iomanip>
 
 #include <GL/freeglut.h>
 #include <GL/gl.h>
@@ -27,8 +29,10 @@ const int height = 600;
 
 const float speed = 0.2f; //0.08f;
 const float drift = 0.019f;
-const float deviation = 1.0f; // 0.785f;
+const float deviation = 0.785f;
 const float waveChangeLimit = 100.0;
+
+std::ofstream outFile("output.txt");
 
 /*
 
@@ -742,16 +746,16 @@ void onDisplay(void) {
     GLfloat y = ((GLfloat)posLeft.y + (GLfloat)posRight.y) / 2.0f;
 
     // Trace
-    trace.push_back(Pos(posLeft.x + 1, posLeft.y + 1));
+    //trace.push_back(Pos(posLeft.x + 1, posLeft.y + 1));
 
-    glBegin(GL_POINTS);
-    glColor3f(1.00, 1.00, 0.00);
-    for (auto item : trace) {
-      glVertex2f((GLfloat)item.x, (GLfloat)item.y);
-      glVertex2f((GLfloat)item.x + 1.0, (GLfloat)item.y + 1.0);
-      glVertex2f((GLfloat)item.x - 1.0, (GLfloat)item.y - 1.0);
-    }
-    glEnd();
+    //glBegin(GL_POINTS);
+    //glColor3f(1.00, 1.00, 0.00);
+    //for (auto item : trace) {
+    //  glVertex2f((GLfloat)item.x, (GLfloat)item.y);
+    //  glVertex2f((GLfloat)item.x + 1.0, (GLfloat)item.y + 1.0);
+    //  glVertex2f((GLfloat)item.x - 1.0, (GLfloat)item.y - 1.0);
+    //}
+    //glEnd();
 
     glBegin(GL_TRIANGLE_STRIP);
     glColor3f(0.00, 1.00, 1.00);
@@ -761,6 +765,8 @@ void onDisplay(void) {
     glVertex2f(x + (GLfloat)5.0, y + (GLfloat)0.0);
 
     glEnd();
+
+    outFile << ": " << x << "/" << y << " : ";
   }
 
   if (it.get()) {
@@ -779,6 +785,8 @@ void onDisplay(void) {
               it->tracker_1.periodVariance,
               it->tracker_2.periodVariance);
     printString(Pos(50, 30), buf);
+
+    outFile << buf << ": " << std::endl;
 
     sprintf_s(
         buf, sizeof(buf), "L2 %s / %s : data %d",
@@ -994,6 +1002,7 @@ void VisualCubeMain() {
   //  size_t startPosX = 400 + (i * 25);
   //  DrawLine(startPosX, 100, startPosX + 1, 700, 1);
   //}
+  //outFile << "Type 1: spiral pattern" << std::endl;
 
   for (size_t i = 0; i < 1; ++i) {
     size_t startPosY = 200 + (i * 70);

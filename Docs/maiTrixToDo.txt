@@ -2550,3 +2550,5 @@ By modelling the unique electrical qualities explored in the study, the research
 neurons were able to solve the kinds of computational problems which were previously thought to require more 
 complex networks in the brain.
 
+
+moved under Git \Projects\Docs\FoundAItion\Source\Its\Docs\maiTrixToDo.txt 
