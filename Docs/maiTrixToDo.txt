@@ -2552,3 +2552,28 @@ complex networks in the brain.
 
 
 moved under Git \Projects\Docs\FoundAItion\Source\Its\Docs\maiTrixToDo.txt 
+
+
+148) https://spectrum.ieee.org/jeff-hawkins
+
+
+This project's name is inspired by the structure of the neocortex; it's made up of thousands of so-called 
+cortical columns, each divided into multiple layers of neurons. "The human brain has about 150,000 cortical
+columns, and each one is essentially its own learning machine," 
+
+"The human brain got big very quickly in evolution by replicating the cortical column many times, and we 
+hope we can do the same," Hawkins says.
+
+The project is also based on the neocortex's role in sensorimotor learning. Whereas deep neural networks 
+currently learn from giant static databases, the neocortex learns in a dynamic manner: It perceives its 
+surroundings using the senses, explores how things work using body movements, and builds models of 
+the world from both this sensory and motor feedback.
+
+In addition, the project is developing AI based on the neocortex's reliance on reference frames. 
+In the mammalian brain, so-called place cells help encode memories of locations and grid cells help map 
+locations in space. The neocortex uses these reference frames to store and understand the constant
+stream of sensorimotor data it receives.
+
+"The way in which the brain structures data-in 2-D and 3-D reference frames-copies the structures of objects
+in the real world," Hawkins says
+
